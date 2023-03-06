@@ -1,0 +1,13 @@
+Para poder usar el comando sar instalamos: sudo apt install sysstat
+Para activar la recopilación de datos indicamos true en: nano /etc/default/sysstat (reiniciar el servicio después)
+Intervalo para los comandos: 1 600 (intervalos de 1 segundo durante 10 minutos)
+
+-u: actividad cpu
+-r: actividad ram
+-n DEV: actividad red de un dispositivo
+-n ALL: actividad red de todos los dispositivos
+-q: carga del sistema
+-p: actividad de cada núcleo de la cpu
+-y: estadísticas TTY
+-I SUM: muestra resúmenes de estadísticas de interrupciones
+-u ALL: muestra actividades de CPU para todos los nucleos

@@ -1,0 +1,13 @@
+COMANDO GET-PROCESS
+Get-process: sirve para obtener información de un proceso
+Get-process Chrome: muestra información de los procesos de Chrome
+Get-process -id [PID]: muestra información de ese proceso
+Get-process | select-object *: muestra info de todos los procesos
+Get-process | sort-object cpu (o workingset) -descending: ordena los procesos de menos a mas de la cpu o memoria
+
+COMANDO STOP-PROCESS
+Stop-process: sirve para parar un proceso
+Stop-process -name (o el PID): para un proceso en especifico
+Stop-process -name Chrome, Notepad: cierra varios procesos a la vez
+Stop-process -name Chrome -force: fuerza el cierre del proceso
+Stop-process -name Chrome -computername PC27: cierra el proceso en un pc remoto

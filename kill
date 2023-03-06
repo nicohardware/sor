@@ -1,0 +1,4 @@
+COMANDO KILL: envía señales a los procesos (por defecto para que termine)
+Kill [PID]: termina ese proceso en especifico
+Killall [nombre proceso aka Firefox]: termina todos los procesos que contengan esos nombres
+Kill -SIGTERM [PID]: manda la señal de finalizar proceso (sigterm es sustituible por el num 9)

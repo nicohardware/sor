@@ -1,0 +1,27 @@
+nfs server
+
+Archivo de configuración: sudo nano /etc/exports
+Montar recurso en red: mount -t nfs (ruta compartida)
+Ver el estado del servicio: sudo service nfs-server status
+Dar permisos totales a la carpeta: sudo chmod 777 /compartida
+Exportar las carpetas del archivo exports: sudo exportfs -arv
+Quitar el firewall: sudo ufw disable
+
+Parámetros para recursos compartidos en NFS:
+/compartidaNFS1 192.168.100.0/24(rw,sync,no_subtree,insecure)
+[ruta recurso] [red a compartir + mascara] [parámetros]
+
+
+nfs host
+
+Montar carpeta en cliente (recomendable hacerlo con FSTAB directamente): 
+sudo mkdir /mnt/compartidaNFS1 (crear ruta) 
+sudo mount 192.169.100.20:/compartidaNFS1 /mnt/compartidaNFS1 (montar carpeta)
+Montar en cliente Windows: mount -o anon \\192.168.100.20\compartidaNFS1 z:
+
+Automontar carpetas al iniciar sesión (FSTAB): 
+Archivo de configuración: sudo nano /etc/fstab
+
+Parámetros de FSTAB:
+[dirección IP de la carpeta con su ruta] [ruta donde se montará] [tipo (NFS)] [_netdev 0 0]
+

@@ -1,0 +1,14 @@
+Añadir usuarios (no solo para samba): sudo adduser …
+Archivo de configuración: sudo nano /etc/samba/smb.conf
+Para especificar un grupo de trabajo se hace en Workgroup
+Reiniciar el servicio: sudo service samba-ac-dc restart
+Reiniciar el grupo de trabajo: sudo service smbd restart
+
+Parámetros para recursos compartidos en Samba:
+[nombre_del_recurso_en_red]
+Path = ruta del recurso
+Writable (permiso de escritura) = yes
+Readonly (solo lectura) = yes
+Guest ok (permitir usuarios invitados) = yes
+Guest account (cuenta de invitado) = usuario1
+Valid users (usuarios permitidos) = usuario1 usuario2

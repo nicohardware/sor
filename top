@@ -1,0 +1,4 @@
+COMANDO TOP: para monitorizar en tiempo real
+Top -o: mostrar la memoria o cpu (top -o %MEM) (top -o %CPU) (top -o %CPU -o %MEM)
+Top -u [usuario]: lo mismo que el -o pero con un usuario especifico
+Top -d: intervalo de actualización

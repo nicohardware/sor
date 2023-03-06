@@ -1,0 +1,7 @@
+COMANDO PS: muestra los procesos en ejecución
+ps aux: muestran todos los procesos, el usuario, y los procesos no asociados a una terminal
+ps -p: mostrar un proceso detallado
+-o: añaden atributos al ps -p como user, pid,ppid,%cpu,%mem,cmd,vsz,rss,time,start
+ps aux | grep firefox: muestra todos los procesos que contengan el nombre Firefox
+ps -u [usuario] : muestra todos los procesos de un usuario
+ps aux --sort= -%cpu | head -n 11: ordena de menos a mas los procesos enseñando 10 + la cabecera

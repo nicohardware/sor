@@ -1,0 +1,11 @@
+Cómo asignar permisos de ejecución al script:
+Sudo chmod +x /etc/init.d/script.sh
+Cómo asignar nivel de ejecución:
+sudo chkconfig --level 3 nombre_de_tu_script on
+Cómo eliminar un script:
+sudo chkconfig --level 3 nombre_de_tu_script off
+
+Cómo crear enlaces simbólicos: 
+Primero se crea el script.sh en la carpeta de init.d
+Nos movemos a la carpeta rc0.d o rcl.d
+Ejecutamos el comando: ln -s /etc/init.d/script.sh script.sh [ln -s ruta del archivo original + nombre del enlace ]
